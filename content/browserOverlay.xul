@@ -18,28 +18,13 @@
       src="chrome://crypticioverifier/locale/browserOverlay.properties" />
   </stringbundleset>
 
-  <menubar id="main-menubar">
-    <menu id="crypticioverifier-hello-menu" label="&crypticioverifier.hello.label;"
-      accesskey="&crypticioverifier.helloMenu.accesskey;" insertafter="helpMenu">
-      <menupopup>
-        <menuitem id="crypticioverifier-hello-menu-item"
-          label="&crypticioverifier.hello.label;"
-          accesskey="&crypticioverifier.helloItem.accesskey;"
-          oncommand="CrypticIOChrome.BrowserOverlay.sayHello(event);" />
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="crypticioverifier-hello-menu"
+        label="&crypticioverifier.hello.label;"
+        accesskey="&crypticioverifier.helloItem.accesskey;"
+insertbefore="devToolsEndSeparator"
+        oncommand="CrypticIOChrome.BrowserOverlay.sayHello(event);"/>
       </menupopup>
-    </menu>
-  </menubar>
 
-  <vbox id="appmenuSecondaryPane">
-    <menu id="crypticioverifier-hello-menu-2" label="&crypticioverifier.hello.label;"
-      accesskey="&crypticioverifier.helloMenu.accesskey;"
-      insertafter="appmenu_addons">
-      <menupopup>
-        <menuitem id="crypticioverifier-hello-menu-item-2"
-          label="&crypticioverifier.hello.label;"
-          accesskey="&crypticioverifier.helloItem.accesskey;"
-          oncommand="CrypticIOChrome.BrowserOverlay.sayHello(event);" />
-      </menupopup>
-    </menu>
-  </vbox>
-</overlay>
+
+  </overlay>
