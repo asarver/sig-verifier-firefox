@@ -14,7 +14,9 @@ var srcs = Array.prototype.map.apply(scripts, [function(s){return s.src}])
 srcs = srcs.filter(function(s){return s!==""})
 //and the datamains is using require
 var dataMains = Array.prototype.map.apply(scripts, [function(s){return document.location.origin+'/'+s.getAttribute('data-main')}])
-dataMains.filter(function(s){return s !== null})
+dataMains = dataMains.filter(function(s){return !(s === document.location.origin+'/null')})
+//dataMains = dataMains.map(function(s){if (s===document.location.origin+'/null')});//"https://cryptic.io/null")});
+//https://cryptic.io/null);
 
 srcs = srcs.concat(dataMains)
 
@@ -79,11 +81,11 @@ var verifyHashes = function(hash1, hash2){
   return def
 }
 
-var errCallback = function(){console.error("Didn't work", arguments)}
+var errCallback = function(){window.alert("we don't win");console.error("Didn't work", arguments)}
 
 var allSuccess = function(){
   //Every hash checks out, now we can tell the extension to draw the page icon
-  chrome.extension.sendRequest({status:true}, function(response) {});
+  window.alert("we win");
 }
 
 srcsPromises = srcs.map(function(filename){
