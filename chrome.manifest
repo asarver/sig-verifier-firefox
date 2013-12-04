@@ -1,5 +1,0 @@
-content   crypticioverifier                content/
-skin      crypticioverifier  classic/1.0   skin/
-locale    crypticioverifier  en-US         locale/en-US/
-
-overlay chrome://browser/content/browser.xul  chrome://crypticioverifier/content/browserOverlay.xul
