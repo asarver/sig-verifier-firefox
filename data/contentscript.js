@@ -79,11 +79,14 @@ var verifyHashes = function(hash1, hash2){
   return def
 }
 
-var errCallback = function(){window.alert("we don't win");console.error("Didn't work", arguments)}
+var errCallback = function(){
+    window.alert("This page has been compromised! Please reload the page!");
+		window.alert("Refresh the page.");
+		console.error("Didn't work", arguments)}
 
 var allSuccess = function(){
   //Every hash checks out, now we can tell the extension to draw the page icon
-  window.alert("we win");
+  window.alert("Normally this wouldn't be here. Eventually the icon in the right bottom corner will be green.");
 }
 
 srcsPromises = srcs.map(function(filename){

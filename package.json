@@ -1,9 +1,10 @@
 {
-  "name": "cfx_addon",
-  "fullName": "cfx_addon",
+  "name": "signature_verifier",
+  "fullName": "Cryptic IO Signature Verifier",
   "id": "jid1-QQ0EMqK49eAOtA",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "This plugin will run in Firefox and verify the integrity of certain sites (cryptic.io in particular) in order to prevent a site from injecting malicious, unaccounted for code.",
+  "author": "Cryptic-io",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "1.0",
+	"homepageURL": "https://cryptic.io"
 }
