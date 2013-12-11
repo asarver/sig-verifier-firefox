@@ -15,8 +15,6 @@ srcs = srcs.filter(function(s){return s!==""})
 //and the datamains is using require
 var dataMains = Array.prototype.map.apply(scripts, [function(s){return document.location.origin+'/'+s.getAttribute('data-main')}])
 dataMains = dataMains.filter(function(s){return !(s === document.location.origin+'/null')})
-//dataMains = dataMains.map(function(s){if (s===document.location.origin+'/null')});//"https://cryptic.io/null")});
-//https://cryptic.io/null);
 
 srcs = srcs.concat(dataMains)
 
